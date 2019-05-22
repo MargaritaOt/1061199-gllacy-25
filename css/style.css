@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #ffffff;
+
+
+  background-color: #849d8f;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+a { color: #ffffff;
+   text-decoration: none;
+}
+.site-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  list-style: none;
+
+  background-color: #849d8f;
+
+
+}
+.user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #ffffff;
+  list-style: none;
+
+  background-color: #849d8f;
+}
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus, 
+.catalog-icecream a:hover,
+.catalog-icecream a:focus,
+.footer-social a:hover,
+.footer-social a:focus,
+.extra-info a:hover,
+.extra-info a:focus
+{
+  background-color: #ef6140;
+}
+.time-work {
+   font-size: 22px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+p {
+   font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.offers-item {
+   font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+.offers {background-image: url("img/rb.png");
+   font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+  
+.offers-item {
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.catalog-icecream {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  list-style: none;
+  text-align: center;
+}
+
+.catalog-icecream-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+}
+.about {
+    font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232; 
+
+
+}
+.icecream {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #323232; 
+  list-style: none;
+
+  background-color: #849d8f;
+  background-image: url("img/wafer.png");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.news {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #323232; 
+  text-align: left;
+
+  background-color: #849d8f;
+  background-image: url("img/strawberry.png");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.recipe {
+   font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #323232;
+  text-decoration: underline; 
+  text-align: left;
+}
+.email {
+   font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  text-align: left;
+  color: #5a5a5a;
+
+ background-color: #f8f7f4
+ border-image-source: url("img/candy-borderpng");
+ border-radius: 10px;
+}
+.contacts {
+   font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: left;
+  color: #323232;
+}
+.footer-social ul{
+  list-style: none;
+
+}
+.button {
+  font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #e85239;
+  border: none;
+}
+.extra-info {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  text-align: left;
+  color: #ffffff;
+  list-style: none;
+}
+
+.footer-copyright {
+   font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  text-align: left;
+  color: #fefefe;
+}
+
+.button:hover {
+  background-color: #e85239;
+}
+.button:focus {
+  background-color: #f26843;
+}
+.button:active {
+  background-color: #e85239;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  font: inherit;
+  color: #999999;
+  font-size: 16px;
+  text-align: left;
+
+  background-color: #ffffff;
+  border: 1px solid #greyish-52;
+}
+
+.user-navigation-item li {
+   list-style: none;
+}
+
+.breadcrumbs {
+   list-style: none;
+}
+.page-title {
+   font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+  text-align: left;
+  color: #fefefe;
+}
+.pagination-list {
+    list-style: none;
+}
+.pagination-item {
+   color: #ffffff;
+   font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+}
+.pagination-item a:hover {background-color: #ffffff;}
+.pagination-item a:focus {background-color: #ffffff;}
+.pagination-item a:active  {color: #323232;}

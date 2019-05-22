@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+   <link href="css/normalize.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-catalog">
 <header class="header">
@@ -22,27 +25,27 @@
   <h1>Корзина товаров</h1>
 <table>
     <tr class="visually-hidden">
-      <th class="col-1">Товары</th>       
-      <th class="col-2 cell-highlight">Количество</th>       
-      <th class="col-3">Стоимость</th>
+      <th class="col-item">Товары</th>       
+      <th class="col-quantity">Количество</th>       
+      <th class="col-price">Стоимость</th>
       </tr>
    <tr class="item-1">
-     <td class="col-1">
+     <td class="col-item">
        <a class="catalog-icecream" href="catalog.html">
        <img src="img/icecream-13.jpg" width="220" height="165" alt="Пломбир с апельсиновым джемом"></td>          
-     <td class="col-2">1,5 кг х 200 руб.</td>            
-     <td class="col-3">300 руб.</td>
+     <td class="col-quantity">1,5 кг х 200 руб.</td>            
+     <td class="col-price">300 руб.</td>
      </tr>
    <tr class="item-2"> 
   <td>
    <a class="catalog-icecream" href="catalog.html">
    <img src="img/icecream-14.jpg" width="220" height="165" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>  
-  <td class="col-2">1,5 кг х 300 руб.</td>            
-  <td class="col-3">450 руб.</td>
+  <td class="col-quantity">1,5 кг х 300 руб.</td>            
+  <td class="col-price">450 руб.</td>
   </tr>
     <tr class="price">
-    <td class="col-1" colspan="2">Итого:</td>    
-    <td class="col-3">750 руб.</td>
+    <td class="col-total" colspan="2">Итого:</td>    
+    <td class="total-price">750 руб.</td>
     </tr>
     </table>
     <button class="button" type="submit">Отправить</button>
@@ -64,7 +67,7 @@
         <!-- Здесь будет форма -->
       </section>
       <section>
-      <h3 class="catalog-icecream">Виды сливочного мороженого</h3>
+      <h3 class="visually-hidden">Виды сливочного мороженого</h3>
  <ul class="catalog-list">
          <li class="catalog-icecream">
               <a class="catalog-icecream-title" href="catalog-icecream.html">
@@ -243,18 +246,23 @@
       </section>
     </main>
     <footer class="main-footer">
-        <ul class="footer-social">
+     <footer class="main-footer">
+<div class="footer-social">
+        <ul>
         <li><a class="social-button" href="#">Твиттер</a></li>
         <li><a class="social-button" href="#">Инстаграм</a></li>
         <li><a class="social-button" href="#">Фейсбук</a></li>
         <li><a class="social-button" href="#">Вконтакте</a></li>
     </ul>
+    </div>
+    <div>
     <ul class="extra-info">
      <li><a href="info.html">Для поставщиков</a></li>
         <li><a href="info.html">О производстве</a></li>
         <li><a href="info.html">Наши документы</a></li>
         <li><a href="info.html">Экологические стандарты</a></li>  
     </ul>
+    </div> 
       <p class="footer-copyright">
          <a class="logo Academy" href="index.html">
           <img src="img/logo-htmlacademy.svg" width="111" height="24" alt="Логотип Academy">
