@@ -10,7 +10,6 @@ body {
 	background-repeat: no-repeat;
 
 	min-width: 1200px;
-	min-height: 2415px;
 	margin: 0;
 	padding: 0;
 }
@@ -70,23 +69,17 @@ a {
 .header {
 	display: flex; 
  	flex-direction: row; 
-	flex-wrap: nowrap;
  	justify-content: flex-start;
-    margin: 0 auto;
-    width: 1146px;
-}
+   margin: 0 auto;
+}   
 
 .main-navigation {
  	display: flex; 
  	flex-direction: row; 
-	flex-wrap: nowrap;
  	justify-content: flex-start;
-    margin: 0 25px;
-    width: 560px;
 	font-size: 14px;
  	line-height: 16px;
- 	font-weight: normal;
-	
+ 	font-weight: normal;	
 	color: #ffffff;
 }
 
@@ -140,7 +133,6 @@ a {
 .user-navigation {
 	display: flex; 
  	flex-direction: row; 
-	flex-wrap: nowrap;
  	justify-content: flex-end;	
 }
 
@@ -228,9 +220,16 @@ a {
 	opacity: 1;
 }
 
+.time-work {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+}
 .time {
 	font-size: 14px;
 	line-height: 16px;
+	font-weight: bold;	
 }
 
 .tel {
@@ -240,7 +239,6 @@ a {
 }
 
 .site-wrapper {
-  min-width: 940px;
   background-color: #849d8f;
   background-image: url("../img/slider-item1.png");
   background-repeat: no-repeat;
@@ -380,52 +378,42 @@ a {
 }
 
 .hot-offers {
-	background-position: top center;
-	background-repeat: no-repeat;
-	width: 1146px;
 	display: flex;
 	justify-content: space-between;	
-	margin: 25px;
+	margin: 22px;
 }
 
-.offers1 {
-	width: 560px;
-	font-weight: bold;
+.offers-card {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 49%;
+}
+
+.offers-card.rb {
 	background-image: url("../img/rb.png");
-   border-radius: 10px;
-	background-position: top center;
+   background-position: top center;
 	background-repeat: no-repeat;
-
-	display: flex;
-	flex-direction: column;
-	margin-left: 25px;
-}
-
-.offers2 {
-	width: 560px;
-	background-image: url("../img/choco.png");
 	border-radius: 10px;
+}
+
+.offers-card.choco {  
+	background-image: url("../img/choco.png");
 	background-position: top center;
 	background-repeat: no-repeat;
-
-	display: flex;
-	flex-direction: column;
-	margin-left: 25px;
+	border-radius: 10px;
 }
-
+	
 .offers-item {
-	margin: 18px 15px;
+	margin: 25px 20px;
 }
 
-.offers1 button,
-.offers2 button {
+.offers-card button {
 	margin-left: auto;
 	margin-right: 25px;
-	margin-top: 45px;
+	margin-bottom: 25px;
 }
 
-.offers1 h3,  
-.offers2 h3  {
+.offers-card h3 {
 	position: relative;
 	font-size: 35px;
 	line-height: 41px;
@@ -435,7 +423,7 @@ a {
 .suggestion {
 	font-size: 17px;
 	line-height: 22px;
-	margin: 0 0 0 15px;
+	margin: 0 0 0 25px;
 }
 
 .catalog {
@@ -444,14 +432,35 @@ a {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-top: -150px;
+  margin-left: 0;
 }
 
 .catalog-icecream {
 	flex-basis: 25%;
 	display: flex;
 	flex-direction: column-reverse;
+	position: relative;
+}
+
+.catalog-hit::before {
+   content: "";
+   background-image: url("../img/hit.svg");
+ 	background-repeat: no-repeat;
+ 	position: absolute;
+ 	width: 61px;
+ 	height: 61px;
+ 	right: 0;
+ 	left: 20px; 
+ 	top: 90px;
+}
+
+.catalog-icecream-price {
+	position: absolute;
+	bottom: 45px;
+	left: 15px;
+ 	font-size: 45px;
+ 	line-height: 45px;
+ 	font-weight: bold;
 }
 
 .catalog-icecream a {
@@ -460,44 +469,29 @@ a {
 
 .link img {
 	border-radius: 50%;
-	margin-bottom: -25px;
-}
-
-.catalog-icecream-price {
-	position: relative;
-	top: 280px;
-	left: 20px;
- 	font-size: 45px;
- 	line-height: 45px;
- 	font-weight: bold;
 }
 
 .shop {
-	min-height: 308px;
  	background-color: #849d8f;
 	background-image: url("../img/wafer.png");
 	border-radius: 10px;
  	background-position: top center;
  	background-repeat: repeat;
-   margin: 0 25px;
+ 	margin: 25px 25px;
 }
 
-.about { 
+.shop-title { 
 	font-size: 24px;
 	line-height: 30px;
 	color: #323232; 
-	padding: 30px 0 0 20px;
+	padding: 20px 0 0 20px;
 }
 
-.icecream {
-	width: 1146px;
-	max-height: 215px;
+.shop-features {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 0;
-	margin: 0 30px 30px 0;
 
 	font-size: 16px;
 	line-height: 22px;
@@ -506,52 +500,17 @@ a {
 	list-style: none;	
  }
 
-.preparation {
-	width: 470px;
-	height: 80px;
-	margin-left: 70px;
-}
+ .shop-feature {
+ 	max-width: 470px;
+ 	position: relative;
+ 	padding-left: 30px;
+ 	margin: 0 25px 20px 10px;
+ }
 
-.purchase {
-	width: 460px;
-	height: 80px;
-	margin: 0 30px 0 70px;
-}
-
-.factory {
-	width: 470px;
-	height: 80px;
-	margin-left: 70px;
-}
-
-.delivery {
-	width: 460px;
-	height: 80px;
-	margin: 0 30px 0 70px;
-}
-
-.preparation svg {
+.shop-feature svg {
 	position: absolute;
-	left: 200px;
-	top: 1375px;
-}
-
-.purchase svg {
-	position: absolute;
-	left: 785px;
-	top: 1375px;
-}
-
-.factory svg {
-	position: absolute;
-	left: 200px;
-	top: 1455px;
-}
-
-.delivery svg {
-	position: absolute;
-	left: 785px;
-	top: 1455px;	
+   left: -25px;
+   top: -10px;
 }
 
 .news {
@@ -641,11 +600,9 @@ a {
 }
 
 .footer {
- 	width: 1200px;
- 	min-height: 65px;
+	width: 1200px;
 	margin:  0 auto;
 	padding: 10px 25px;
- 
  	font-size: 12px;
 	line-height: 18px;
 }
@@ -695,42 +652,21 @@ a {
 .extra-info li{
 	display: flex;
 	justify-content: center;
-
-	margin: 0 10px 0 15px;
+   margin: 0 10px 0 15px;	
+   position: relative;
 }
 
 .extra-info svg {
 	position: absolute;
-    left: 630px;
-    width: 18px;
-    height: 15px;
+   left: -25px;
+   width: 18px;
+   height: 15px;
 }
 
 .footer-copyright {
 	display: flex;
 	flex-direction: column;
 	color: #ffffff;
-}
-
-.button {
-	display: inline-block;
-	margin: 20px 0 20px -4px;
-	padding: 10px 20px;
-	font: inherit;
-	text-align: center;
-	color: #ffffff;
-	border-radius: 40px;
-	border-color: #f26743;
-	background-color: #f26743;
-}
-
-.button:hover,
-        aciive {
-	background-color: #dd563a;
-}
-
-.button:focus {
-	background-color: #f17d64;
 }
 
 .login-form input[type="text"],
@@ -768,6 +704,27 @@ a {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: normal;
+}
+
+.button {
+	display: inline-block;
+	margin: 20px 0 20px -4px;
+	padding: 10px 20px;
+	font: inherit;
+	text-align: center;
+	color: #ffffff;
+	border-radius: 40px;
+	border-color: #f26743;
+	background-color: #f26743;
+}
+
+.button:hover,
+        aciive {
+	background-color: #dd563a;
+}
+
+.button:focus {
+	background-color: #f17d64;
 }
 
 .visually-hidden:not(:focus):not(:active),
