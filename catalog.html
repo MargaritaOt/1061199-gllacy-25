@@ -88,28 +88,67 @@
     </table>
     <button class="button" type="submit">Оформить заказ</button>
   </section>
-          </li>
-      </ul>
-<section class="time-work">
+    </li>
+ </ul> 
+</nav> 
+<div class="page-wrapper">
+    <section class="time-work">
       <p class="time">С 10 до 20, ежедневно</p>
       <a class="link-tel" href="tel:8-812-450-25-25">8 812 450-25-25</a>
-     </section>      
-      </nav>
-   </header>
-    <main>
-      <div class="breadcrumbs-wrapper">
+     </section>         
+     <div class="breadcrumbs-wrapper">  
       <h1 class="page-title">Сливочное мороженое</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a></li>
         <li class="breadcrumbs-item breadcrumbs-current"><a class="breadcrumbs-current-link" href="catalog.html">Каталог</a></li>
         <li class="breadcrumbs-item">Сливочное</li>
       </ul>
+    </div>  
     </div>
-       <section class="filters">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
-      </section>
-      <section>
+     </header>
+    <main>
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+   <div class="">
+<label for="dayscount">Цена 100руб. - 500 руб.</label>
+<input type="range" id="dayscount" name="dayscount" min="100" max="500" step="1">
+</div>
+<div class="two-third-width">
+  <label for="food">По популярности</label>
+    <select id="food" name="food">
+  <optgroup label="Мороженное">
+  <option value="meat">По популярност</option>
+</optgroup>
+  </select>
+</div>
+  <div>
+    <p>Жирность:</p>
+  <input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">0%</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">до 10%</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">до 30%</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">выше 30%</label>
+<input type="submit" value="Отправить">
+</div>
+  <div>
+    <p>Наполнители:</p>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">шоколадные</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">сахарные присыпки</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">фрукты</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">сиропы</label>
+<input type="checkbox" name="subscribe" id="subscribe-field" checked>
+<label for="subscribe-field">джемы</label>
+<input type="submit" value="Применить">
+  </div>
+  </section>
+    <section>
       <h3 class="visually-hidden">Виды сливочного мороженого</h3>
  <ul class="catalog-list">
   <li class="catalog-icecream">

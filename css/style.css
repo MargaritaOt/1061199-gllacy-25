@@ -130,6 +130,7 @@ a {
  	justify-content: flex-start;
     margin: 0 auto;
     padding: 10px 25px;
+    flex-wrap: wrap;
 }
 
 .header svg {
@@ -418,6 +419,7 @@ input[type="email"] {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	margin-left: auto;
 }
 
 .time {
@@ -700,17 +702,18 @@ input[type="email"] {
 	display: none;
 	background-color: #9bafa3;
 	padding: 13px 15px;
-	margin: 15px 45px;
+	margin: 0 45px;
+	margin-top: 50px;
 }
 
 .catalog-icecream:hover button {
 	display: flex;
+	position: absolute;
 	background-color: #9bafa3;
 }
 
 .catalog-icecream:hover {
 	background-color: #9bafa3;
-
 }
 
 .shop {
@@ -817,36 +820,44 @@ input[type="email"] {
 
 .contacts {
 	width: 1200px;
-	margin: 0 auto;
+	margin: 30px auto;
 	padding: 15px 0;
  	font-size: 14px;
  	line-height: 20px;
  	font-weight: normal;
- 	text-align: left;
   	color: #323232;
+  	display: flex;
+  	position: relative;
+}	
+
+.contacts img {
+	height: 380px;
+	position: absolute;
+	top: 0;
 }
 
 .contacts span {
 	font-size: 18px;
  	line-height: 24px;
 	font-weight: bold;
+	padding-bottom: 20px;
 }
 
 .contacts svg {
-	transform: translate(265px, -295px);
+	transform: translate(270px, 80px);
 }
 
 .contacts-direction {
-	width: 250px;
 	background-color: #f8f7f4;
 	border: 1px solid #cccccc;
-   border-radius: 5px;
-   transform: translate(880px, -520px);
-   padding: 25px 25px 5px 25px;
-   margin: 0;
-
-   display: flex;
-   flex-direction: column; 
+    border-radius: 5px;
+    padding: 25px 25px 5px 25px;
+    margin-right: 27px;
+    margin-top: 40px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
 }
 
 .contacts-direction .link {
@@ -861,9 +872,9 @@ input[type="email"] {
 	background-color: #f8f7f4;
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 	border: 1px solid #cccccc;
-   border-radius: 5px;
-   position: relative;
-   display: none;
+    border-radius: 5px;
+    position: relative;
+    display: none;
 }
 
 .feedback p {
@@ -874,22 +885,22 @@ input[type="email"] {
 .answer {
 	font-size: 18px;
 	line-height: 20px;
-   font-weight: bold;
-   margin: 20px;
+    font-weight: bold;
+    margin: 20px;
 }
 
 .feedback { 
 	display: flex;
-   flex-direction: column;
+    flex-direction: column;
 }
 
 #comment-field {
-  width: 357px;
-  margin: 5px 20px;
-  color: #999999;
-  box-sizing: border-box; 
-  border: 1px solid #cccccc;
-  border-radius: 5px;
+    width: 357px;
+    margin: 5px 20px;
+    color: #999999;
+    box-sizing: border-box; 
+    border: 1px solid #cccccc;
+    border-radius: 5px;
 }
 
 .modal-direction .button {
@@ -898,40 +909,40 @@ input[type="email"] {
 }
 
 .modal-close {
-  width: 22px;
-  height: 22px;
-  font-size: 0;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .modal-close::before,
 .modal-close::after {
-  content: "";
+    content: "";
 
-  position: absolute;
-  top: 10px;
-  left: 2px;
-  width: 19px;
-  height: 1px;
-  background-color: #323232;
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 19px;
+    height: 1px;
+    background-color: #323232;
 }
 
 .modal-close::before {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .modal-close::after {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .footer {
-	width: 1200px;
-	margin:  0 auto;
+	width: 1146px;
+	margin: 0 auto;
 	padding: 10px 25px;
  	font-size: 12px;
 	line-height: 18px;
@@ -943,7 +954,7 @@ input[type="email"] {
    justify-content: space-between;
 }
 
-.footer-social { 
+.footer-social { ;
 	width: 186px;
 	list-style: none;
  	display: flex;
@@ -961,13 +972,13 @@ input[type="email"] {
 }
 
 .footer-social ul {
-   display: flex;
+    display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 186px;
 	list-style: none;
 	margin: 0 auto;
-   padding: 0;
+    padding: 0;
 }
 
 .extra-info {
@@ -980,27 +991,33 @@ input[type="email"] {
 }
 
 .extra-info li {
-   margin-top: 10px;
-   position: relative;
+    margin-top: 10px;
+    position: relative;
 }
 
 .extra-info ul {
-   list-style: none;
-   padding-left: 0;
-   margin-right: 25px;
+    list-style: none;
+    padding-left: 0;
+    margin-right: 25px;
 }
 
 .extra-info svg {
-   position: absolute;
-   left: -25px;
-   width: 18px;
-   height: 15px;
+    position: absolute;
+    left: -25px;
+    width: 18px;
+    height: 15px;
 }
 
 .footer-copyright {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }	
+
+.page-wrapper {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-grow: 1;
+}
 
 .breadcrumbs-wrapper {
 	display: flex;
@@ -1014,6 +1031,24 @@ input[type="email"] {
 	margin-bottom: auto;
 }
 
+ .breadcrumbs-current {
+	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;	
+}
+
+.breadcrumbs-current-link::before {
+	content: "≫";
+	position: absolute;
+	right: 7px;
+}
+
+.breadcrumbs-current-link::after {
+	content: "≫";
+	position: absolute;
+	left: 7px;
+}
+
 .page-title {
 	font-size: 35px;
 	line-height: 41px;
@@ -1022,50 +1057,6 @@ input[type="email"] {
 	color: #fefefe;
 	margin-top: auto;
 }
-
-.breadcrumbs-item .breadcrumbs-link {
-	position: relative;
-	padding-right: 25px;
-}
-
-/*.breadcrumbs-link::before,
-.breadcrumbs-current-link::before {
-	content: "";
-
-	position: absolute;
-	top: 5px;
-	left: 25px;
-	width: 35px;
-	height: 35px;
-
-	background-image: url("../img/icon-right-small.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	transform: translate(45px, -5px) scale(0.7);
-	background-size: contain;
-}
-
-.breadcrumbs-link::after,
-.breadcrumbs-current-link::after {
-    content: "";
-
-	position: absolute;
-	top: 5px;
-	left: 20px;
-	width: 35px;
-	height: 35px;
-
-	background-image: url("../img/icon-right-small.svg");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	transform: translate(45.5px, -5px) scale(0.7);
-}
-
-.breadcrumbs-item .breadcrumbs-current-link {
-	position: relative;
-	padding-right: 25px;
-}
-*/
 
 .visually-hidden:not(:focus):not(:active),
 input[type="search"].visually-hidden,
