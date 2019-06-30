@@ -351,7 +351,7 @@ input[type="email"] {
 
 .basket table {
    border-collapse: collapse;
-   margin: 10px;
+   padding: 10px 0;
    table-layout: fixed;
 }
 
@@ -675,6 +675,8 @@ input[type="email"] {
 }
 .catalog-icecream a {
 	text-align: center;
+	font-size: 16px;
+    line-height: 22px;
 }
 
 .catalog img,
@@ -692,7 +694,7 @@ input[type="email"] {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	padding-left: 0;
-	margin: 0;
+	margin: 0 14px;
 }
 
 .catalog-list .catalog-icecream {
@@ -702,14 +704,21 @@ input[type="email"] {
 	display: none;
 	background-color: #9bafa3;
 	padding: 13px 15px;
-	margin: 0 45px;
-	margin-top: 50px;
+	position: relative;
+	margin: 0 50px 20px 50px;
 }
 
 .catalog-icecream:hover button {
 	display: flex;
+	position: relative;
+	background-color: #9bafa3;
+	z-index: 2;
+}
+.action {
+	width: 293px;
 	position: absolute;
 	background-color: #9bafa3;
+	margin-top: 64px;
 }
 
 .catalog-icecream:hover {
@@ -1122,5 +1131,183 @@ input[type="email"].visually-hidden {
 	border-radius: 50%;
 }
 
+.filters {
+	width: 865px;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 14px;
+    line-height: 16px; 
+    padding-bottom: 20px;
+    padding-left: 25px;
+}
 
+.filters p {
+	padding: 7px 10px;
+	margin: 0;
+}
 
+.sorting {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	margin-right: 15px;
+}
+
+.filter-sorting select{
+	padding: 8.5px;
+	margin-bottom: 5px;
+	background-color: #abbcb2;
+	border-radius: 20px;
+	color: #ffffff;
+	font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter-sorting option::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/cross-big.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-fat {
+	padding: 10px;
+	background-color: #abbcb2;
+	border-radius: 20px;
+}
+
+.filter-fat label {
+  	position: relative;
+    cursor: pointer;
+    padding: 0 25px 0 30px;
+}
+
+.filter-fat label:last-child {
+	padding-right: 0;
+}
+
+.fat-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.fat-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: -5px;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-filler {
+	padding: 10px;
+	background-color: #abbcb2;
+	border-radius: 20px;
+}
+
+.filter-filler label {
+  	position: relative;
+    cursor: pointer;
+    padding: 0 25px 0 30px;
+}
+
+.filter-filler label:last-child {
+	padding-right: 0;
+}
+
+.filler-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filler-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: -5px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-button {
+	padding: 8px 25px;
+	color: #e5eae7;
+	background: #a6b7ae;
+	border: 2px solid #e5eae7;
+	margin-left: auto;
+    margin-right: 50px;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.price {
+	margin-right: 15px;
+}
+
+.filter-price {
+	position: relative;
+	width: 210px;
+	height: 35px;
+	background-color: #abbcb2;
+	border-radius: 20px;
+}
+
+.range svg {
+	position: absolute;
+	top: -5px;
+	z-index: 1;
+}
+
+.range::before {
+	content: "";
+	position: absolute;
+
+    width: 182px;
+    height: 3px;
+    background: #ffffff;
+    top: 20px;
+    left: 12px;
+}

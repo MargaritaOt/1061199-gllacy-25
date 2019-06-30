@@ -109,50 +109,60 @@
     <main>
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-   <div class="">
-<label for="dayscount">Цена 100руб. - 500 руб.</label>
-<input type="range" id="dayscount" name="dayscount" min="100" max="500" step="1">
-</div>
-<div class="two-third-width">
-  <label for="food">По популярности</label>
-    <select id="food" name="food">
-  <optgroup label="Мороженное">
-  <option value="meat">По популярност</option>
-</optgroup>
+  <div class="sorting">
+     <p>Сортировка:</p>
+    <div class="filter-sorting">
+    <select id="filter-sorting" name="filter-sorting">    
+  <option value="popular">по популярности</option>
+  <option value="expensive">сначала дорогие</option>
   </select>
 </div>
-  <div>
-    <p>Жирность:</p>
-  <input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">0%</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">до 10%</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">до 30%</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">выше 30%</label>
-<input type="submit" value="Отправить">
 </div>
-  <div>
+  <div class="price">
+<p>Цена 100 руб. - 500 руб.</p>
+ <div class="filter-price">
+<div class="range"><svg><circle r="10" cx="35" cy="25" fill="#ffffff"></circle></svg></div>
+<div class="range"><svg><circle r="2" cx="35" cy="25" fill="#849d8f"></circle></svg></div>
+<div class="range"><svg><circle r="10" cx="140" cy="25" fill="#ffffff"></circle></svg></div>
+<div class="range"><svg><circle r="2" cx="140" cy="25" fill="#849d8f"></circle></svg></div>
+ </div>  
+ </div>
+<div class="fat">
+    <p>Жирность:</p>
+ <div class="filter-fat">
+  <input class="visually-hidden fat-input-checkbox" type="checkbox" name="percent-zero" id="filter-percent-zero" checked>
+<label for="filter-percent-zero">0%</label>
+  <input class="visually-hidden fat-input-checkbox" type="checkbox" name="percent-to-ten" id="filter-percent-to-ten" checked>
+<label for="filter-percent-to-ten">до 10%</label>
+  <input class="visually-hidden fat-input-checkbox" type="checkbox" name="percent-to-thirty" id="filter-percent-to-thirty" checked>
+<label for="filter-percent-to-thirty">до 30%</label>
+  <input class="visually-hidden fat-input-checkbox" type="checkbox" name="percent-above-thirty" id="filter-percent-above-thirty" checked>
+<label for="filter-percent-above-thirty">выше 30%</label>
+</div>
+</div>
+  <div class="filler">
     <p>Наполнители:</p>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">шоколадные</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">сахарные присыпки</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">фрукты</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">сиропы</label>
-<input type="checkbox" name="subscribe" id="subscribe-field" checked>
-<label for="subscribe-field">джемы</label>
-<input type="submit" value="Применить">
+<div class="filter-filler">
+  <input class="visually-hidden filler-input-checkbox" type="checkbox" name="chocolate" id="filter-chocolate" checked>
+<label for="filter-chocolate">шоколадные</label>
+  <input class="visually-hidden filler-input-checkbox" type="checkbox" name="sugar" id="filter-sugar" checked>
+<label for="filter-sugar">сахарные присыпки</label>
+  <input class="visually-hidden filler-input-checkbox" type="checkbox" name="fruit" id="filter-fruit" checked>
+<label for="filter-fruit">фрукты</label>
+  <input class="visually-hidden filler-input-checkbox" type="checkbox" name="syrup" id="filter-syrup" checked>
+<label for="filter-syrup">сиропы</label>
+  <input class="visually-hidden filler-input-checkbox" type="checkbox" name="jam" id="filter-jam" checked>
+<label for="filter-jam">джемы</label>
   </div>
+</div>
+  <button type="submit" class="filter-button">Применить</button>
   </section>
     <section>
       <h3 class="visually-hidden">Виды сливочного мороженого</h3>
  <ul class="catalog-list">
   <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+    <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
  <a class="link" href="icecream-1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
  <p class="catalog-icecream-image">
   <a class="link" href="icecream-1.html">
@@ -163,7 +173,8 @@
    </p>
 </li>
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-2.html">Сливочно-кофейное с кусочками шоколада</a>
   <p class="catalog-icecream-image">
    <a class="link" href="icecream-2.html">
@@ -174,7 +185,8 @@
   </p>
  </li>
 <li class="catalog-icecream">
- <button class="button" href="#">Быстрый просмотр</button> 
+ <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
  <a class="link" href="icecream-3.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-3.html">
@@ -185,7 +197,8 @@
   </p>
  </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-4.html">Сливочное крем-брюле с карамельной подливкой</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-4.html">
@@ -196,7 +209,8 @@
   </p>
 </li>
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-5.html">Сливочное с брусничным джемом</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-5.html">
@@ -207,7 +221,8 @@
   </p>
 </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-6.html">Сливочно-черничное с цельными ягодами черники</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-6.html">
@@ -218,7 +233,8 @@
   </p>
 </li>        
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-7.html">Сливочно-лимонное с карамельной присыпкой</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-7.html">
@@ -229,7 +245,8 @@
   </p>
 </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-8.html">Сливочное с шоколадной стружкой</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-8.html">
@@ -240,7 +257,8 @@
   </p>
 </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+ <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-9.html">Сливочное-ванильное с кусочками шоколада</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-9.html">
@@ -251,7 +269,8 @@
   </p>
 </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+ <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-10.html">Сливочное с ментоловым сиропом</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-10.html">
@@ -262,7 +281,8 @@
   </p>
 </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-11.html">Сливочное с кусочками черного шоколада</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-11.html">
@@ -273,7 +293,8 @@
   </p>
 </li> 
 <li class="catalog-icecream">
-  <button class="button" href="#">Быстрый просмотр</button> 
+  <div class="action">
+  <button class="button" href="#">Быстрый просмотр</button></div>
   <a class="link" href="icecream-12.html">Сливочное с мятным сиропом</a>
   <p class="catalog-icecream-image">
   <a class="link" href="icecream-12.html">
