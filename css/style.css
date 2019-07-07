@@ -28,7 +28,7 @@ body {
 	border: 0;
 }
 
-img {
+img:not(.col-item img) {
 	max-width: 100%;
 	height: auto;
 }
@@ -44,20 +44,25 @@ a {
 	padding: 7px 10px;
 }
 
-.user-navigation a {
+.page-catalog .site-navigation-current {
 	display: block;
-	padding: 9px 16px;
+	padding: 8px 12px;
 }
 
-.site-navigation a:hover:not(.site-navigation-current),
-.site-navigation a:focus:not(.site-navigation-current) {
+.user-navigation a {
+	display: block;
+	padding: 9px 16px 9px 17px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
 	background-color: #ffffff;
 	border-radius: 20px;
 	color: #323232; 
 	font-weight: bold;
 }
 
-.site-navigation a:active:not(.site-navigation-current) {
+.site-navigation a:active {
 	background-color: #d07058;
 	border-radius: 20px;
 	color: #ffffff; 
@@ -69,6 +74,13 @@ a {
 	color: #ffffff; 
 	border-radius: 20px;
 	font-weight: bold;
+}
+
+.page-catalog .site-navigation-current:hover,
+.page-catalog .site-navigation-current:focus,
+.page-catalog .site-navigation-current:active {
+	background-color: #d07058;
+	color: #ffffff; 
 }
 
 .catalog-menu a:hover { 
@@ -125,9 +137,9 @@ a {
 	display: flex; 
  	flex-direction: row; 
  	justify-content: flex-start;
-    margin: 0 auto;
-    padding: 10px 25px;
     flex-wrap: wrap;
+    padding: 10px 27px;
+    margin: 0 auto;
 }
 
 .header svg {
@@ -147,8 +159,12 @@ a {
 
 .site-navigation {
  	list-style: none;
-    padding: 0 13px;
+    padding: 0 9px;
     margin: 13px 0;
+}
+
+.page-catalog .site-navigation {
+    padding: 0 6px;
 }
 
 .site-navigation > li {
@@ -199,13 +215,15 @@ a {
  	flex-direction: row; 
  	justify-content: flex-end;	
  	list-style: none;
+ 	padding: 0;
+ 	margin: 13px 0;
  	font-size: 14px;
     line-height: 16px;
     font-weight: normal;
 }
 
-.user-navigation li {
- 	margin: 0 5px;
+.user-navigation li:not(:first-child) {
+ 	margin-left: 10px;
 }
 
 .input {
@@ -226,7 +244,7 @@ input[type="search"] {
     border-radius: 5px;
 }
 
-input[type="text"]
+input[type="text"],
 input[type="password"] {
     padding: 20px;
     margin: 5px 20px;
@@ -239,6 +257,15 @@ input[type="password"] {
 input[type="email"] {
  	padding: 20px 15px;
     margin: 35px 11px 35px 20px;
+    color: #999999;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.feedback input[type="email"] {
+ 	padding: 20px;
+    margin: 10px 11px 10px 20px;
     color: #999999;
     box-sizing: border-box;
     border: 1px solid #cccccc;
@@ -268,7 +295,7 @@ input[type="email"] {
 	border: 1px solid #cccccc;
     border-radius: 5px;
     z-index: 1;
-    display: none;
+    display: none;  
 }
 
 .search {
@@ -284,11 +311,6 @@ input[type="email"] {
 	padding: 7px 10px;
 }
 
-.search-link svg {	
-	top: 6px;
-    left: 8px;
-}
-
 .search-link:hover,
 .search-link:focus,
 .search-link:active {
@@ -302,6 +324,11 @@ input[type="email"] {
 	display: flex;
 	flex-direction: row-reverse;
 	padding: 0 20px;
+}
+
+.login-wrapper button {
+    padding: 10px 28px;
+    border-radius: 20px;
 }
 
 .login-help {
@@ -325,7 +352,8 @@ input[type="email"] {
 .login-link svg,
 .basket-link svg {
 	position: absolute;	
-	top: 5px;	
+	top: 5px;
+	left: 15px;	
 }
 
 .login-link span,
@@ -346,7 +374,7 @@ input[type="email"] {
 
 .basket .basket-catalog-link {
 	position: relative;
-	padding-left: 40px;
+	padding-left: 45px;
 	color: #323232;
 	background-color: #ffffff;
 	border-radius: 20px;
@@ -370,28 +398,36 @@ input[type="email"] {
    table-layout: fixed;
 }
 
-.col-item a {
-	color: #6b6a69;
+.page-catalog .col-item a {
+	color: #323232;
 	font-weight: normal; 
-	padding: 0;
 	margin: 0;
+	padding: 5px 0 0 15px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 16px;
 }
 
-.basket-table {
-	display: flex;
-	width: 100%;
+.col-item img {
+	border-radius: 50%;
+}
+
+.col-item p {
+	margin: 10px 0;
 }
 
 .basket-table .col-item {
-    width: 60%;
-	margin-left: 20px;
+    width: 90%;
     position: relative;
     padding-left: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 .col-item .modal-close{
- 	top: 10px;
-    right: 300px;
+ 	top: 15px;
+    right: 280px;
 }
 
 .basket-table .col-quantity {
@@ -400,17 +436,33 @@ input[type="email"] {
 
 .basket-table .col-price {
     width: 15%;  
-    text-align: left;
 }
 
-.basket-table .price {
- 	font-weight: bold;
- 	
+.total-price {
+	margin-left: auto;
+	padding: 15px;
+	font-weight: bold;
+	position: relative;
 }
 
-.col-total {
-	text-align: right;
+.total-price::before {
+	content: " ";
+    position: absolute;
+    width: 500px;
+    height: 2px;
+    background-color: #cacac7;
+    border-radius: 20px;
+    top: -1px;
+    left: -390px;
 }
+
+.modal-basket .button {
+	margin-left: auto;
+	margin-right: 13px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
 .modal-basket {
 	width: 540px;
 	background-color: #f8f7f4;
@@ -421,13 +473,6 @@ input[type="email"] {
 	display: flex;
 	flex-direction: column;
 	display: none;
-}
-
-.modal-basket .button {
-	margin-left: auto;
-	margin-right: 13px;
-	margin-bottom: 15px;
-	margin-top: 0;
 }
 
 .time-work {
@@ -441,14 +486,15 @@ input[type="email"] {
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: bold;
-	margin: 0 0 5px 0;
+	margin-top: 3px;
+    margin-bottom: 5px;
 }
 
 .link-tel {
 	font-size: 22px;
 	line-height: 24px;
 	font-weight: bold;
-	padding: 0 7px;
+	padding: 0 5px;
 }
 
 .visually-hidden {
@@ -485,7 +531,7 @@ input[type="email"] {
   	text-align: center;
   	color: #ffffff;
   	padding-top: 264px;
-  	margin: 0 25px;
+  	margin: 0 27px;
 }
 
 .slider-list {
@@ -498,14 +544,14 @@ input[type="email"] {
   	width: 700px;
   	margin: 0 auto;
   	font-size: 60px;
-  	line-height: 60px;
+  	line-height: 60.35px;
   	font-weight: bold;
 }
 
 .slider-list .button {
   	display: inline-block;
     padding: 12px 39px;
-    margin: 31px 0;
+    margin: 30px 0;
 	font-weight: 600;
     font-size: 31px;
     line-height: 41px;
@@ -529,8 +575,8 @@ input[type="email"] {
 
 .slider-controls {
   	position: absolute;
-  	bottom: 54px;
-  	left: 2px;
+  	bottom: 52px;
+  	left: 0;
   	z-index: 20;
   	font-size: 0;
 }
@@ -576,7 +622,7 @@ input[type="email"] {
 .hot-offers {
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 26px;	
+	margin: 11px 27px;	
 }
 
 .offers-card {
@@ -600,15 +646,16 @@ input[type="email"] {
 }
 	
 .offers-item {
-	margin: 15px 20px;
+	margin: 0 13px;
+    padding: 15px 5px;
 }
 
 .offers-card button {
 	margin-left: auto;
-    margin-right: 25px;
-    margin-bottom: 23px;
-    margin-top: 45px;
-    padding: 15px 25px;
+    margin-right: 23px;
+    margin-bottom: 26px;
+    margin-top: 46px;
+    padding: 14px 26px;
 }
 
 .offers-card h3 {
@@ -621,7 +668,7 @@ input[type="email"] {
 .suggestion {
 	font-size: 17px;
 	line-height: 22px;
-	margin: 0 0 0 25px;
+	margin: 0 0 0 20px;
 }
 
 .catalog {
@@ -631,9 +678,8 @@ input[type="email"] {
   	display: flex;
     justify-content: space-between;
   	align-items: flex-start;
-  	padding-left: 13px;
-  	padding-top: 7px;
-  	margin-right: 15px;
+    padding: 0;
+    margin: 23px 14px;
 }
 
 .catalog-icecream {
@@ -651,8 +697,8 @@ input[type="email"] {
  	width: 61px;
  	height: 61px;
  	right: 0;
- 	left: 15px; 
- 	top: 15px;
+ 	left: 15px;
+    top: 14px;
 }
 
 .catalog-icecream-price {
@@ -673,8 +719,8 @@ input[type="email"] {
  	width: 31px;
  	height: 36px;
  	right: 0;
- 	left: 78px;
-    top: 5px;
+ 	left: 80px;
+    top: 4px;
 }
 
 .catalog-icecream-price span {
@@ -683,24 +729,30 @@ input[type="email"] {
 	font-size: 24px;
  	line-height: 28px;
 }
-.catalog-icecream a {
+
+.link-name {
+    margin: 0;
+    padding: 0 20px;
 	text-align: center;
 	font-size: 16px;
     line-height: 22px;
-    padding: 0 10px;
+    font-weight: normal;
+}
+
+.catalog-icecream a .link {
+    padding: 0;
+    margin: 0;
 }
 
 .catalog img,
 .catalog-list img {
 	border-radius: 50%;
-	padding-top: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
+	margin: 13px 11px 9px 12px;
 }
 
 .catalog-icecream-image {
-	padding: 0;
-	margin: 10px 0;
+	margin: 0;
+    padding: 0;
 }
 
 .catalog-list {
@@ -708,36 +760,36 @@ input[type="email"] {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	padding-left: 0;
-	margin: 5px 14px;
+	margin: 7px 14px;	
 }
 
 .catalog-list .catalog-icecream {
-	margin-bottom: 20px;
+	margin-bottom: 28px;
 }
+
 .catalog-icecream .button {
 	display: none;
-	background-color: #9bafa3;
-	padding: 13px 15px;
+	padding: 11px 16px;
 	position: relative;
-	margin: 15px 50px 20px 50px;
+	margin: 10px 50px 20px 50px;
 }
 
 .catalog-icecream:hover button {
 	display: flex;
 	position: relative;
-	background-color: #9bafa3;	
 }
 
 .action {
 	width: 293px;
-	position: absolute;
-	background-color: #9bafa3;
-	margin-top: 75px;
-	z-index: 1;
+    position: absolute;
+    margin-top: 70px;
+    right: 0px;
+    background-color: rgb(255, 255, 255, 0.4);
+    z-index: 3;
 }
 
 .catalog-icecream:hover {
-	background-color: #9bafa3;
+    background-color: rgb(255, 255, 255, 0.4);
 }
 
 .shop {
@@ -746,7 +798,7 @@ input[type="email"] {
 	border-radius: 10px;
  	background-position: top center;
  	background-repeat: repeat;
- 	margin: 37px 27px 42px 27px;
+ 	margin: 0 27px 40px 27px;
 }
 
 .shop-title { 
@@ -754,8 +806,8 @@ input[type="email"] {
 	line-height: 30px;
 	font-weight: normal;
 	color: #323232; 
-	padding: 22px 0 0 20px;
-    margin: 26px 0;
+	padding: 25px 18px;
+    margin: 37px 0 0 0;
 }
 
 .shop-features {
@@ -763,27 +815,26 @@ input[type="email"] {
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: normal;
 	color: #323232; 
 	list-style: none;
-	margin: 0;	
-	padding-bottom: 6px;
+	margin: 0;
+	padding-bottom: 2px;	
  }
 
  .shop-feature {
  	max-width: 470px;
  	position: relative;
  	padding-left: 25px;
- 	margin: 0 35px 20px 10px;
+ 	margin: 0 35px 22px 10px;
  }
 
 .shop-feature svg {
 	position: absolute;
     left: -30px;
-    top: -13px;
+    top: -14px;
 }
 
 .news {
@@ -798,7 +849,7 @@ input[type="email"] {
 }
 
 .news-blog {
-	margin: 20px 0 5px 20px;
+	margin: 22px 0 5px 20px;
     font-size: 16px;
     line-height: 22px;
     font-weight: normal;
@@ -850,7 +901,7 @@ input[type="email"] {
 
 .contacts {
 	width: 1200px;
-	margin: 38px auto;
+	margin: 40px auto;
 	padding: 15px 0;
  	font-size: 14px;
  	line-height: 20px;
@@ -879,9 +930,9 @@ input[type="email"] {
 	background-color: #f8f7f4;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    padding: 15px 16px 15px 15px;
+    padding: 15px 19px 15px 20px;
     margin-right: 29px;
-    margin-top: 47px;
+    margin-top: 48px;
     margin-left: auto;
     display: flex;
     flex-direction: column;
@@ -895,9 +946,10 @@ input[type="email"] {
 
 .contacts-direction .button {
 	font-size: 18px;
- 	line-height: 22px;
-	font-weight: bold;
-	margin: 20px 10px;
+    line-height: 24px;
+    font-weight: bold;
+    margin: 18px 5px;
+    padding: 11px 22px;
 }
 
 .contacts-direction .link {
@@ -926,7 +978,7 @@ input[type="email"] {
 	font-size: 18px;
 	line-height: 20px;
     font-weight: bold;
-    margin: 20px;
+    margin: 15px;
 }
 
 .feedback { 
@@ -936,9 +988,9 @@ input[type="email"] {
 
 #comment-field {
     width: 357px;
-    margin: 5px 20px;
+    margin: 5px 0 0 22px;
     color: #999999;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     border: 1px solid #cccccc;
     border-radius: 5px;
 }
@@ -964,7 +1016,7 @@ input[type="email"] {
 .modal-close::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 2px;
     width: 19px;
     height: 1px;
@@ -980,24 +1032,23 @@ input[type="email"] {
 }
 
 .footer {
-	width: 1146px;
-	margin: 0 auto;
-	margin-top: 53px;
-	padding: 10px 20px 10px 25px;
- 	font-size: 12px;
-	line-height: 18px;
-	font-weight: normal;
+	width: 1200px;
+    margin: 0 auto;
+    margin-top:61px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
 }
 
 .footer-catalog {
-    margin-top: 50px;
-    padding: 0 20px 10px 25px;
+    margin-top: 48px;
 }
 
 .footer-container {
  	display: flex;
  	flex-direction: row;
     justify-content: space-between;
+    margin: 0 22px;
 }
 
 .footer-social { ;
@@ -1007,7 +1058,8 @@ input[type="email"] {
  	flex-direction: row;
  	justify-content: space-between;
  	padding: 0;
- 	margin-top: 17px;
+    margin-top: 17px;
+    margin-left: 5px;
 }
 
 .social-button {
@@ -1036,7 +1088,7 @@ input[type="email"] {
 	flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 10px;
-    margin-left: 40px
+    margin-left: 40px;
 }
 
 .extra-info li {
@@ -1052,10 +1104,10 @@ input[type="email"] {
 
 .extra-info svg {
     position: absolute;
-    left: -25px;
     width: 18px;
     height: 15px;
     top: 3px;
+    left: -26px;
 }
 
 .footer-copyright {
@@ -1073,6 +1125,7 @@ input[type="email"] {
 	flex-direction: row-reverse;
 	flex-grow: 1;
 	flex-basis: 100%;
+	margin-top: -6px;
 }
 
 .breadcrumbs-wrapper {
@@ -1084,7 +1137,7 @@ input[type="email"] {
     list-style: none;
 	display: flex;
 	padding-left: 0;
-	margin-top: 20px;
+	margin-top: 26px;
 	margin-bottom: auto;
 	font-size: 14px;
 	line-height: 16px;
@@ -1113,7 +1166,7 @@ input[type="email"] {
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: bold;
-	margin: 8px 0;
+	margin: 7px 0 9px 0;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -1141,7 +1194,7 @@ input[type="email"].visually-hidden {
     display: flex;
     justify-content: flex-end;
     padding: 0 25px;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .pagination-item a {
@@ -1199,7 +1252,7 @@ input[type="email"].visually-hidden {
 }
 
 .filters p {
-	padding: 6px 13px;
+	padding: 7px 13px;
 	margin: 0;
 }
 
@@ -1213,7 +1266,7 @@ input[type="email"].visually-hidden {
 }
 
 .filter-sorting select{
-	padding: 8.5px 65px 8px 15px;
+	padding: 8.5px 59px 8px 15px;
 	margin-bottom: 9px;
 	background-color: #abbcb2;
 	border-radius: 20px;
@@ -1222,8 +1275,6 @@ input[type="email"].visually-hidden {
     line-height: 16px;
     font-weight: bold;
     -webkit-appearance: none;
-    -moz-appearance: none;
-  	appearance: none;
  }
 
 .sorting p {
@@ -1236,19 +1287,16 @@ input[type="email"].visually-hidden {
   	left: 170px;
   	top: 40px;
   	fill: currentColor;
+  	pointer-events: none;
 }
 
-.filter-sorting select:hover {
+.filter-sorting:hover select,
+.filter-sorting:hover svg {
 	color: #323232;
-}
-
-.filter-sorting select+svg:hover {
-	color: #323232;
-	fill: currentColor;
 }
 
 .filter-fat {
-	padding: 10px 17px;
+	padding: 10px 19px;
 	background-color: #abbcb2;
 	border-radius: 20px;
 }
@@ -1293,7 +1341,7 @@ input[type="email"].visually-hidden {
 }
 
 .filter-filler {
-	padding: 10px 25px;
+	padding: 10px 26px 10px 19px;
 	background-color: #abbcb2;
 	border-radius: 20px;
 }
@@ -1301,7 +1349,7 @@ input[type="email"].visually-hidden {
 .filter-filler label {
   	position: relative;
     cursor: pointer;
-    padding: 0 25px 0 30px;
+    padding: 0 27px 0 30px;
 }
 
 .filter-filler label:last-child {
@@ -1333,15 +1381,17 @@ input[type="email"].visually-hidden {
 }
 
 .filter-button {
-	padding: 8px 35px;
+	padding: 8px 33px;
     color: #e5eae7;
     background: #a6b7ae;
     border: 2px solid #e5eae7;
+    border-radius: 20px;
     margin-left: auto;
     margin-right: 0;
     margin-top: 30px;
-    border-radius: 20px;
-    font-weight: bold;
+    font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
 }
 
 .filter-button:hover,
@@ -1351,8 +1401,10 @@ input[type="email"].visually-hidden {
 }
 
 .price {
-	margin-right: 14px;
 	position: relative;
+    margin: 0;
+    padding: 0 15px 0 0;
+    font-weight: bold;
 }
 
 .filter-price {
@@ -1364,20 +1416,20 @@ input[type="email"].visually-hidden {
 
 .range-from svg {
 	position: absolute;
-	left: 33px;
-    top: 37px;
+	left: 36px;
+    top: 38px;
 }
 
 .range-before svg {
 	position: absolute;
-	left: 130px;
-    top: 37px;
+	left: 133px;
+    top: 38px;
 }
 
 .filter-price::before {
 	content: "";
 	position: absolute;
-	width: 182px;
+	width: 187px;
     height: 4px;
     background: #ffffff;
     top: 45px;
@@ -1387,3 +1439,88 @@ input[type="email"].visually-hidden {
 .modal-show {
   display: block;
 }
+
+@-moz-document url-prefix() {
+    .catalog-icecream-price b::before {
+        left: 95px; 
+    }
+
+    .action {
+        bottom: -70px;
+    }
+
+    .catalog-icecream .button {
+    	margin: 9px 50px 20px 50px;
+    }
+
+    .filter-sorting select {
+     	border: none;
+        -moz-appearance: none;
+    }
+
+    .sorting {
+    	margin-right: 7px;
+    }
+
+    .filter-sorting svg {
+    	left: 185px;
+		top: 43px;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .offers-card button {
+    	margin-left: 350px;
+    }
+
+    .catalog-icecream-price b::before {
+        left: 95px; 
+    }
+
+    .action {
+        margin-top: 0;
+        background-color: #9bafa3;
+    }
+
+    .catalog-icecream:hover {
+    	background-color: #9bafa3;
+    }
+
+    .filter-sorting select {
+     	border: none;
+	   -ms-appearance:none;
+	   -o-appearance:none;
+    }
+
+    .sorting {
+     	margin-right: 5px;
+    }
+
+	.price {
+		margin-right: 5px;
+	} 
+
+	.filter-sorting svg {
+    	left: 195px;
+    	top: 44px;
+    }   
+}
+
+@supports (-ms-ime-align:auto) {
+	.filter-sorting select {
+     	border: none;
+	}
+
+	.action {
+        bottom: -70px;
+        background-color: #9bafa3;
+    }
+
+    .catalog-icecream:hover {
+    	background-color: #9bafa3;
+    }
+}
+
+
+
+
