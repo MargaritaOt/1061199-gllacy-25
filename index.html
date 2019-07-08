@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="js/script.js" rel="stylesheet">
@@ -104,12 +104,12 @@
           <div class="offers-card rb">
             <h3 class="offers-item">Малинка даром!</h3>
             <p class="suggestion">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <button class="button" type="button">Хочу варенье!</button>
+            <a class="button" href="raspberries.html">Хочу варенье!</a>
           </div>
           <div class="offers-card choco">
             <h3 class="offers-item">Шоколадки даром!</h3>
             <p class="suggestion">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <button class="button" type="button">Хочу шоколадки!</button>
+            <a class="button" href="chocolate.html">Хочу шоколадки!</a>
           </div>
         </section>
   <section class="hit">
@@ -117,7 +117,7 @@
     <ul class="catalog">
       <li class="catalog-icecream catalog-hit">
         <div class="action">
-         <button class="button">Быстрый просмотр</button></div>
+         <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
          <a class="link-name" href="catalog-icecream.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
          <p class="catalog-icecream-image">
           <a class="link" href="catalog-icecream.html">
@@ -129,7 +129,7 @@
     </li>
     <li class="catalog-icecream catalog-hit">
       <div class="action">
-        <button class="button">Быстрый просмотр</button></div>
+        <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
         <a class="link-name" href="catalog-icecream.html">Сливочно-кофейное с кусочками шоколада</a>
         <p class="catalog-icecream-image">
           <a class="link" href="catalog-icecream.html">
@@ -141,7 +141,7 @@
     </li>
     <li class="catalog-icecream catalog-hit">
       <div class="action">
-        <button class="button">Быстрый просмотр</button></div>
+        <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
         <a class="link-name" href="catalog-icecream.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
         <p class="catalog-icecream-image">
           <a class="link" href="catalog-icecream.html">
@@ -153,7 +153,7 @@
     </li> 
     <li class="catalog-icecream catalog-hit">
       <div class="action">
-        <button class="button">Быстрый просмотр</button></div>
+        <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
         <a class="link-name" href="catalog-icecream.html">Сливочное крем-брюле с карамельной подливкой</a>
         <p class="catalog-icecream-image">
           <a class="link" href="catalog-icecream.html">
@@ -194,7 +194,7 @@
       <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
         <p class="tl">Для заказов по телефону:
           <a class="link" href="tel:8-812-450-25-25">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
-          <button class="button" type="submit">Форма обратной связи</button>  
+          <a class="button" href="icecream-answer.html">Форма обратной связи</a>  
         </div>
         <h5 class="visually-hidden">Форма обратной связи</h5>
         <section class="modal-direction"> 
@@ -264,13 +264,13 @@
     var close = popup.querySelector(".modal-close");
 
     search.addEventListener("click", function (evt){
-      evt.preventDefault();
-      popup.classList.add("modal-show");
+    evt.preventDefault();
+    popup.classList.add("modal-show");
     });
 
     close.addEventListener("click", function (evt){
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
     });
   </script>                          
 </body>

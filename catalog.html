@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="js/script.js" rel="stylesheet">
@@ -16,7 +16,7 @@
         <img src="img/logo.svg" width="154" height="64" alt="Логотип Глейси">
       </a>
       <ul class="site-navigation">
-        <li><a class="site-navigation-current">Каталог</a></li>
+        <li><a class="link site-navigation-current">Каталог</a></li>
          <ul class="catalog-menu">
                 <li><a class="link" href="#"><span>Новинки</span></a></li>
                 <li><a class="link" href="catalog.html">Сливочное</a></li>
@@ -65,6 +65,7 @@
         <li class="basket">
           <a class="basket-catalog-link" href="basket.html"><span>2 товара</span></a>
           <section class="modal-basket">
+            <div class="basket-wrapper">
             <table class="basket-table">
               <tr class="visually-hidden">
                 <th class="col-item">Товары</th>       
@@ -98,6 +99,7 @@
               </table>  
                     <div class="total-price">Итого: 750 руб.</div>
                 <button class="button" type="submit">Оформить заказ</button>
+              </div>
               </section>
             </li>
           </ul> 
@@ -171,7 +173,7 @@
     <ul class="catalog-list">
       <li class="catalog-icecream">
         <div class="action">
-          <button class="button">Быстрый просмотр</button></div>
+          <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
           <a class="link-name" href="icecream-1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <p class="catalog-icecream-image">
             <a class="link" href="icecream-1.html">
@@ -183,7 +185,7 @@
         </li>
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-2.html">Сливочно-кофейное с кусочками шоколада</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-2.html">
@@ -195,7 +197,7 @@
         </li>
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-3.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-3.html">
@@ -207,7 +209,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-4.html">Сливочное крем-брюле с карамельной подливкой</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-4.html">
@@ -219,7 +221,7 @@
         </li>
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-5.html">Сливочное с брусничным джемом</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-5.html">
@@ -231,7 +233,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-6.html">Сливочно-черничное с цельными ягодами черники</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-6.html">
@@ -243,7 +245,7 @@
         </li>        
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-7.html">Сливочно-лимонное с карамельной присыпкой</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-7.html">
@@ -255,7 +257,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-8.html">Сливочное с шоколадной стружкой</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-8.html">
@@ -267,7 +269,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-9.html">Сливочное-ванильное с кусочками шоколада</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-9.html">
@@ -279,7 +281,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-10.html">Сливочное с ментоловым сиропом</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-10.html">
@@ -291,7 +293,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-11.html">Сливочное с кусочками черного шоколада</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-11.html">
@@ -303,7 +305,7 @@
         </li> 
         <li class="catalog-icecream">
           <div class="action">
-            <button class="button">Быстрый просмотр</button></div>
+            <a class="button" href="icecream-card.html">Быстрый просмотр</a></div>
             <a class="link-name" href="icecream-12.html">Сливочное с мятным сиропом</a>
             <p class="catalog-icecream-image">
               <a class="link" href="icecream-12.html">
