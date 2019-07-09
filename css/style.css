@@ -1008,17 +1008,22 @@ a {
 	z-index: 3;
 }
 
+.direction {
+	position: relative;
+}
+
 .contacts-direction {
 	color: #323232;
-	background-color: #f8f7f4;
-	border: 1px solid #cccccc;
-	border-radius: 5px;
-	position: absolute;
-	margin-top: -374px;
-	margin-left: 1030px;
-	z-index: 3;
-	display: flex;
-	width: 304px;
+    background-color: #f8f7f4;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    position: absolute;
+    top: -374px;
+    left: 869px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 304px;
 }
 
 .contacts-direction p {
