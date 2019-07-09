@@ -1,5 +1,5 @@
 body {
-	font-family: "Cuprum", Arial, sans-serif;
+	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: bold;
@@ -42,6 +42,7 @@ a {
 .search a {
 	display: block;
 	padding: 7px 10px;
+	margin-right: 4px;
 }
 
 .page-catalog .site-navigation-current {
@@ -169,7 +170,9 @@ a {
 .site-navigation .catalog-menu {
 	position: absolute;
 	left: 1px;
-	display: none;
+	top: 35px;
+	padding: 10px 0;
+	visibility: hidden;
 	width: 145px;
 	margin: 5px 0 0 0;
 	padding: 0;
@@ -180,7 +183,6 @@ a {
 }
 
 .site-navigation .catalog-menu a {
-	margin-bottom: -1px;
 	color: #323232;
 	font-weight: normal;
 }
@@ -190,7 +192,7 @@ a {
 }
 
 .site-navigation > li:hover .catalog-menu {
-	display: block;
+	visibility: visible;
 } 
 
 .site-navigation .button {
@@ -255,6 +257,15 @@ a {
 	box-sizing: border-box;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
+}
+
+.dispatch input[type="email"] {
+    padding: 22px 13px;
+    margin: 36px 15px 35px 21px;
+    color: #999999;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
 }
 
 .feedback input[type="email"] {
@@ -333,6 +344,7 @@ a {
 .search a {
 	display: block;
 	padding: 7px 10px;
+	margin-right: 0;
 }
 
 .search-link:hover,
@@ -531,7 +543,6 @@ a {
 	font-size: 22px;
 	line-height: 24px;
 	font-weight: bold;
-	padding: 0 5px;
 }
 
 .visually-hidden {
@@ -579,20 +590,20 @@ a {
 
 .slide-title {
 	width: 700px;
-	margin: 0 auto;
-	font-size: 60px;
-	line-height: 60.35px;
-	font-weight: bold;
+    margin: 0 auto;
+    font-size: 60px;
+    line-height: 60.35px;
+    font-weight: bold;
 }
 
 .slider-list .button {
 	display: inline-block;
-	padding: 12px 39px;
+	padding: 10px 39px;
 	margin: 30px 0;
 	vertical-align: baseline;
-	font-weight: 600;
-	font-size: 31px;
-	line-height: 41px;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 44px;
 }
 
 .slider-list a {
@@ -660,7 +671,7 @@ a {
 .hot-offers {
 	display: flex;
 	justify-content: space-between;
-	margin: 11px 27px;	
+	margin: 13px 27px;	
 }
 
 .offers-card {
@@ -674,6 +685,7 @@ a {
 	background-image: url("../img/rb.png");
 	background-position: top center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	border-radius: 15px;
 }
 
@@ -682,20 +694,24 @@ a {
 	background-image: url("../img/choco.png");
 	background-position: top center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	border-radius: 15px;
 }
 
 .offers-item {
-	margin: 0 13px;
-	padding: 15px 5px;
+	margin: 0;
+    padding: 15px 18px;
 }
 
 .offers-card a {
-	margin-left: auto;
-	margin-right: 23px;
-	margin-bottom: 26px;
-	margin-top: 46px;
-	padding: 14px 26px;
+	font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 23px;
+    margin-bottom: 22px;
+    margin-top: 45px;
+    padding: 11px 23px;
 }
 
 .offers-card h3 {
@@ -706,9 +722,14 @@ a {
 }
 
 .suggestion {
-	font-size: 17px;
-	line-height: 22px;
-	margin: 0 0 0 20px;
+	font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.hit {
+	margin: 5px 3px; 
 }
 
 .catalog {
@@ -720,7 +741,7 @@ a {
 	align-items: flex-start;
 	flex-wrap: wrap;
 	padding: 0;
-	margin: 23px 14px;
+	margin: 0 10px;
 }
 
 .catalog-icecream {
@@ -738,8 +759,8 @@ a {
 	width: 61px;
 	height: 61px;
 	right: 0;
-	left: 15px;
-	top: 14px;
+	left: 12px;
+	top: 28px;
 	z-index: 1;
 }
 
@@ -750,7 +771,8 @@ a {
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: bold;
-	margin: 0;
+	margin: 10px 0;
+    padding: 0;
 }
 
 .catalog-icecream-price b::before{
@@ -761,7 +783,7 @@ a {
 	width: 31px;
 	height: 36px;
 	right: 0;
-	left: 95px;
+    left: 80px;
     top: 8px;
 }
 
@@ -774,11 +796,11 @@ a {
 
 .link-name {
 	margin: 0;
-	padding: 0 20px;
-	text-align: center;
-	font-size: 16px;
-	line-height: 22px;
-	font-weight: normal;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
 }
 
 .catalog-icecream a .link {
@@ -789,7 +811,7 @@ a {
 .catalog img,
 .catalog-list img {
 	border-radius: 50%;
-	margin: 13px 11px 9px 12px;
+    margin: 27px 13px 11px 13px;
 }
 
 .catalog-icecream-image {
@@ -802,18 +824,18 @@ a {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	padding-left: 0;
-	margin: 7px 14px;	
+	margin: 0 14px;	
 }
 
 .catalog-list .catalog-icecream {
-	margin-bottom: 28px;
+	margin-bottom: 13px;
 }
 
 .catalog-icecream .button {
 	display: none;
 	padding: 11px 16px;
 	position: relative;
-	margin: 7px 50px 20px 50px;
+	margin: 10px 50px 20px 50px;
 }
 
 .catalog-icecream:hover a {
@@ -822,7 +844,7 @@ a {
 }
 
 .action {
-	width: 293px;
+	width: 294px;
 	position: absolute;
 	margin-top: 70px;
 	right: 0px;
@@ -845,11 +867,11 @@ a {
 
 .shop-title { 
 	font-size: 24px;
-	line-height: 30px;
-	font-weight: normal;
-	color: #323232; 
-	padding: 25px 18px;
-	margin: 37px 0 0 0;
+    line-height: 30px;
+    font-weight: 500;
+    color: #323232;
+    padding: 25px 0 23px 19px;
+    margin: 36px 0 0 0;
 }
 
 .shop-features {
@@ -916,6 +938,7 @@ a {
 	border: 5px solid;
 	border-image-source: url("../img/candy-border.png");
 	border-image-slice: 10;
+	background-size: contain;
 	border-radius: 10px;
 }
 
@@ -932,67 +955,73 @@ a {
 	line-height: 22px;
 	font-weight: normal;
 	color: #5a5a5a;
-	margin: 30px 25px 0 20px;
+	margin: 30px 20px 0 20px;
 }
 
 .dispatch button {
-	margin-left: auto;
-	margin-right: 23px;
-	margin-top: 35px;
-	margin-bottom: 35px;
-	padding: 12px 21px;
+	font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 22px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 9px 15px;
 }
 
 .contacts {
 	width: 1200px;
-	margin: 40px auto;
-	padding: 15px 0;
+	margin: 39px auto 0;
+	padding: 0;
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: normal;
 	color: #323232;
-	display: flex;
-	position: relative;
 }	
+
+.contacts iframe {
+	position: relative;
+ 	z-index: 2;
+	border: none;
+}
 
 .contacts img {
 	position: absolute;
-	top: 0;
-}
-
-.contacts span {
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: bold;
+    top: 1885px;
+    left: 0;
+    z-index: 1;
 }
 
 .contacts svg {
-	transform: translate(266px, 124px);
+	transform: translate(266px, -295px);
+    position: absolute;
+    z-index: 3;
 }
 
 .contacts-direction {
 	background-color: #f8f7f4;
-	border: 1px solid #cccccc;
-	border-radius: 5px;
-	padding: 0;
-	margin-right: 27px;
-	margin-top: 47px;
-	margin-left: auto;
-	display: flex;
-	flex-direction: column;
-	z-index: 1;
-	width: 300px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 872px;
+    z-index: 3;
+    width: 300px;
 }
 
-.contacts-direction .ad {
-	padding: 28px 23px 18px;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
+.contacts-direction p {
+	margin: 27px 120px 4px 23px;
+}
+
+.edd {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 0 23px;
 }
 
 .contacts-direction .tl {
-	padding: 0px 23px;
+	padding: 17px 23px;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -1000,10 +1029,10 @@ a {
 
 .contacts-direction .button {
 	font-size: 18px;
-	line-height: 24px;
-	font-weight: bold;
-	margin: 25px auto 30px auto;
-	padding: 11px 22px;
+    line-height: 24px;
+    font-weight: bold;
+    margin: 10px 24px 30px;
+    padding: 9px 27px;
 }
 
 .contacts-direction .link {
@@ -1022,7 +1051,6 @@ a {
 	border-radius: 5px;
 	position: relative;
 	display: none;
-	/*top: -1570px;*/
 	left: -430px;
 }
 
@@ -1088,25 +1116,10 @@ a {
 	transform: rotate(-45deg);
 }
 
-/*.contacts-direction > .contacts-direction button {
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;	
-}
-.contacts-direction .modal-direction {
-	position: absolute;
-	display: none;
-	overflow: hidden;
-}
-
-.contacts-direction > .contacts-direction button:hover .modal-direction {
-	display: block;
-} */
-
 .footer {
 	width: 1200px;
 	margin: 0 auto;
-	margin-top:65px;
+	margin-top: 12px;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: normal;
@@ -1158,12 +1171,13 @@ a {
 .extra-info {
 	font-size: 13px;
 	line-height: 18px;
+	font-weight: bold;
 	width: 335px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin-top: 10px;
-	margin-left: 40px;
+	margin-top: 11px;
+	margin-left: 34px;
 }
 
 .extra-info li {
@@ -1174,15 +1188,15 @@ a {
 .extra-info ul {
 	list-style: none;
 	padding-left: 0;
-	margin: 0 35px 0 0;
+	margin: 0 30px 0 0;
 }
 
 .extra-info svg {
 	position: absolute;
 	width: 18px;
 	height: 15px;
-	top: 3px;
-	left: -26px;
+	top: 2px;
+    left: -24px;
 }
 
 .footer-copyright {
@@ -1198,7 +1212,6 @@ a {
 .page-wrapper {
 	display: flex;
 	flex-direction: row-reverse;
-	flex-grow: 1;
 	flex-basis: 100%;
 	margin-top: -6px;
 }
@@ -1212,7 +1225,7 @@ a {
 	list-style: none;
 	display: flex;
 	padding-left: 0;
-	margin-top: 26px;
+	margin-top: 27px;
 	margin-bottom: auto;
 	font-size: 14px;
 	line-height: 16px;
@@ -1221,8 +1234,8 @@ a {
 
 .breadcrumbs-current {
 	position: relative;
-	padding-left: 25px;
-	padding-right: 20px;	
+	padding-left: 22px;
+    padding-right: 18px;	
 }
 
 .breadcrumbs-current-link::before {
@@ -1269,7 +1282,7 @@ input[type="email"].visually-hidden {
 	display: flex;
 	justify-content: flex-end;
 	padding: 0 25px;
-	margin-top: 50px;
+	margin-top: 65px;
 }
 
 .pagination-item a {
@@ -1320,12 +1333,13 @@ input[type="email"].visually-hidden {
 	flex-wrap: wrap;
 	font-size: 14px;
 	line-height: 16px; 
-	padding-bottom: 20px;
+	font-weight: normal;
+	padding-bottom: 13px;
 	padding-left: 25px;
 }
 
 .filters p {
-	padding: 7px 13px;
+	padding: 6px 17px;
 	margin: 0;
 }
 
@@ -1338,16 +1352,23 @@ input[type="email"].visually-hidden {
 	overflow: hidden;
 }
 
-.filter-sorting select{
-	padding: 8.5px 59px 8px 15px;
-	margin-bottom: 9px;
+.filter-sorting {
+	width: 193px;
+	background-color: #abbcb2;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.filter-sorting select {
+	width: 220px;
+	padding: 7px 0 7px 15px;
 	background-color: #abbcb2;
 	border-radius: 20px;
 	color: #ffffff;
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: bold;
-	-webkit-appearance: none;
+	font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+    border: none;
 }
 
 .sorting p {
@@ -1369,7 +1390,7 @@ input[type="email"].visually-hidden {
 }
 
 .filter-fat {
-	padding: 10px 19px;
+	padding: 10px 28px;
 	background-color: #abbcb2;
 	border-radius: 20px;
 }
@@ -1387,7 +1408,7 @@ input[type="email"].visually-hidden {
 .fat-input-checkbox + label::before {
 	content: "";
 	position: absolute;
-	left: -7px;
+	left: -11px;
 	top: -5px;
 	width: 25px;
 	height: 25px;
@@ -1401,27 +1422,25 @@ input[type="email"].visually-hidden {
 	position: absolute;
 	width: 25px;
 	height: 25px;
-	left: -7px;
+	left: -11px;
 	top: -5px;
 	background-image: url("../img/radio-on.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
 
-/*.filter-fat + label:disabled,
-.filler-input-checkbox:checked + label:disabled  {
+.filler-input-checkbox:disabled + label {
 	opacity: 0.1;
 }
 
-.filter-fat + label:focus,
-.filler-input-checkbox:checked + label:focus {
-	opacity: 0.1;
-}*/
-
 .filter-filler {
-	padding: 10px 26px 10px 19px;
-	background-color: #abbcb2;
-	border-radius: 20px;
+	padding: 10px 39px 11px 19px;
+    background-color: #abbcb2;
+    border-radius: 20px;
+}
+
+.filler p {
+	margin: 7px 0 0 0;
 }
 
 .filter-filler label {
@@ -1438,7 +1457,7 @@ input[type="email"].visually-hidden {
 	content: "";
 	position: absolute;
 	left: 0;
-	top: -5px;
+	top: -1px;
 	width: 25px;
 	height: 25px;
 	background-image: url("../img/checkbox-off.svg");
@@ -1452,7 +1471,7 @@ input[type="email"].visually-hidden {
 	width: 25px;
 	height: 25px;
 	left: 0;
-	top: -5px;
+	top: -1px;
 	background-image: url("../img/checkbox-on.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -1460,16 +1479,16 @@ input[type="email"].visually-hidden {
 
 .filter-button {
 	padding: 8px 33px;
-	color: #e5eae7;
-	background: #a6b7ae;
-	border: 2px solid #e5eae7;
-	border-radius: 20px;
-	margin-left: auto;
-	margin-right: 0;
-	margin-top: 30px;
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: bold;
+    color: #e5eae7;
+    background: #a6b7ae;
+    border: 2px solid #e5eae7;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 37px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
 }
 
 .filter-button:hover,
@@ -1485,6 +1504,19 @@ input[type="email"].visually-hidden {
 	font-weight: bold;
 }
 
+.price-input {
+	border: none;
+	background-color: #849d8f;
+	color: #ffffff;
+	width: 27px;
+    padding: 0 0 0 6px;
+    margin: 0;
+}
+
+.price p {
+	padding: 6px 19px;
+}
+
 .filter-price {
 	width: 220px;
 	height: 35px;
@@ -1494,14 +1526,14 @@ input[type="email"].visually-hidden {
 
 .range-from svg {
 	position: absolute;
-	left: 36px;
-	top: 38px;
+	left: 38px;
+    top: 37px;
 }
 
 .range-before svg {
 	position: absolute;
-	left: 133px;
-	top: 38px;
+	left: 136px;
+	top: 37px;
 }
 
 .filter-price::before {
@@ -1510,7 +1542,7 @@ input[type="email"].visually-hidden {
 	width: 187px;
 	height: 4px;
 	background: #ffffff;
-	top: 45px;
+	top: 44px;
 	left: 12px;
 }
 
@@ -1547,7 +1579,7 @@ input[type="email"].visually-hidden {
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.offers-card button {
+	.offers-card a {
 		margin-left: 350px;
 	}
 
@@ -1555,21 +1587,32 @@ input[type="email"].visually-hidden {
 		left: 95px; 
 	}
 
-	.action {
-		margin-top: 0;
-		background-color: #ffffff;
-		opacity: 0.4;
+	.search-form {
+		width: 370px;
 	}
 
-	.catalog-icecream:hover {
+	.modal-login {
+		width: 320px;
+	}
+	
+	/*.action {
+		margin-top: 0;
+		position: relative;
+	}
+
+	.catalog-icecream:befor:hover {
+		content: "";
+		position: absolute;
+		width: 267px;
+		height: 300px;
+		top: 0;
+		left: 0;
 		background-color: #ffffff;
 		opacity: 0.4;
-	}
+	}*/
 
 	.filter-sorting select {
 		border: none;
-		-ms-appearance:none;
-		-o-appearance:none;
 	}
 
 	.sorting {
@@ -1587,7 +1630,11 @@ input[type="email"].visually-hidden {
 
 	.slide-title {
 		width: 720px;
-	}   
+	} 
+
+	.contacts-direction .button {
+		margin: 25px 20px 30px 20px;
+	}  
 }
 
 @supports (-ms-ime-align:auto) {

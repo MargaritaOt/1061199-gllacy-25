@@ -13,3 +13,12 @@ close.addEventListener("click", function (evt){
 evt.preventDefault();
 popup.classList.remove("modal-show");
 });
+
+var button = popup.querySelector("#js-button");
+
+var modal = document.querySelector(".modal-direction");
+
+button.addEventListener("click", function (evt){
+evt.preventDefault();
+modal.classList.add("modal-show");
+});
