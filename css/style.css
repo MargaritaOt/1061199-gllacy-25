@@ -999,25 +999,29 @@ a {
 
 .contacts img {
 	z-index: 1;
+	position: absolute;
 }
 
 .contacts svg {
-	transform: translate(-933px, 140px);
-    position: absolute;
-    z-index: 4;
+	position: absolute;
+	z-index: 4;
+	top: 138px;
+	left: 266px;
 }
 
 .direction {
 	position: relative;
+	min-height: 430px;
 }
 
 .contacts .contacts-direction {
 	color: #323232;
-    background-color: #f8f7f4;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    display: inline-block;
-    width: 304px;
+	background-color: #f8f7f4;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	display: inline-block;
+	width: 304px;
+	z-index: 3;
 }
 
 .contacts .direction {
@@ -1048,7 +1052,7 @@ a {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: normal;
-	padding: 16px 23px;
+	padding: 16px 26px;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -1081,6 +1085,7 @@ a {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 7;
 }
 
 .feedback p {
@@ -1149,7 +1154,7 @@ a {
 .footer {
 	width: 1200px;
 	margin: 0 auto;
-	margin-top: 12px;
+	margin-top: 17px;
 	font-size: 12px;
 	line-height: 18px;
 	font-weight: normal;
@@ -1399,6 +1404,7 @@ input[type="email"].visually-hidden {
 	line-height: 18px;
 	font-weight: normal;
 	border: none;
+	height: 35px;
 }
 
 .sorting p {
@@ -1406,10 +1412,10 @@ input[type="email"].visually-hidden {
 }
 
 .filter-sorting svg {
-	content: "";
+	right: 15px;
+	top: 42px;
+	margin: auto;
 	position: absolute;
-	left: 170px;
-	top: 40px;
 	fill: currentColor;
 	pointer-events: none;
 }
@@ -1604,7 +1610,7 @@ input[type="email"].visually-hidden {
 	}
 
 	.filter-sorting svg {
-		left: 185px;
+		right: 15px;
 		top: 43px;
 	}
 }
@@ -1639,7 +1645,7 @@ input[type="email"].visually-hidden {
 	} 
 
 	.filter-sorting svg {
-		left: 195px;
+		right: 15px;
 		top: 44px;
 	}
 
