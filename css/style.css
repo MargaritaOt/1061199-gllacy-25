@@ -241,7 +241,8 @@ a {
 }
 
 .modal-login input[type="text"],
-.modal-login input[type="password"] {
+.modal-login input[type="password"],
+.feedback input[type="text"] {
 	padding: 20px;
 	margin: 5px 20px;
 	color: #999999;
@@ -260,12 +261,12 @@ a {
 }
 
 .dispatch input[type="email"] {
-    padding: 22px 13px;
-    margin: 36px 15px 35px 21px;
-    color: #999999;
-    box-sizing: border-box;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+	padding: 22px 13px;
+	margin: 36px 15px 35px 21px;
+	color: #999999;
+	box-sizing: border-box;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
 }
 
 .feedback input[type="email"] {
@@ -388,8 +389,8 @@ a {
 .login-link svg,
 .basket-link svg {
 	position: absolute;	
-	top: 5px;
-	left: 15px;	
+	top: 6px;
+	left: 18px;	
 }
 
 .login-link span,
@@ -590,10 +591,10 @@ a {
 
 .slide-title {
 	width: 700px;
-    margin: 0 auto;
-    font-size: 60px;
-    line-height: 60.35px;
-    font-weight: bold;
+	margin: 0 auto;
+	font-size: 60px;
+	line-height: 60.35px;
+	font-weight: bold;
 }
 
 .slider-list .button {
@@ -671,7 +672,7 @@ a {
 .hot-offers {
 	display: flex;
 	justify-content: space-between;
-	margin: 13px 27px;	
+	margin: 12px 27px;	
 }
 
 .offers-card {
@@ -700,18 +701,18 @@ a {
 
 .offers-item {
 	margin: 0;
-    padding: 15px 18px;
+	padding: 15px 18px;
 }
 
 .offers-card a {
 	font-size: 18px;
-    line-height: 24px;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: 23px;
-    margin-bottom: 22px;
-    margin-top: 45px;
-    padding: 11px 23px;
+	line-height: 24px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: 23px;
+	margin-bottom: 22px;
+	margin-top: 45px;
+	padding: 11px 23px;
 }
 
 .offers-card h3 {
@@ -723,9 +724,9 @@ a {
 
 .suggestion {
 	font-size: 18px;
-    line-height: 22px;
-    font-weight: bold;
-    margin: 0 20px;
+	line-height: 22px;
+	font-weight: bold;
+	margin: 0 20px;
 }
 
 .hit {
@@ -772,7 +773,7 @@ a {
 	line-height: 45px;
 	font-weight: bold;
 	margin: 10px 0;
-    padding: 0;
+	padding: 0;
 }
 
 .catalog-icecream-price b::before{
@@ -783,8 +784,8 @@ a {
 	width: 31px;
 	height: 36px;
 	right: 0;
-    left: 80px;
-    top: 8px;
+	left: 80px;
+	top: 8px;
 }
 
 .catalog-icecream-price span {
@@ -796,11 +797,11 @@ a {
 
 .link-name {
 	margin: 0;
-    padding: 0 20px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 500;
+	padding: 0 16px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 500;
 }
 
 .catalog-icecream a .link {
@@ -811,7 +812,7 @@ a {
 .catalog img,
 .catalog-list img {
 	border-radius: 50%;
-    margin: 27px 13px 11px 13px;
+	margin: 27px 13px 11px 13px;
 }
 
 .catalog-icecream-image {
@@ -824,7 +825,7 @@ a {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	padding-left: 0;
-	margin: 0 14px;	
+	margin: -4px 14px;	
 }
 
 .catalog-list .catalog-icecream {
@@ -841,19 +842,26 @@ a {
 .catalog-icecream:hover a {
 	display: flex;
 	position: relative;
+	justify-content: center;
 }
 
 .action {
 	width: 294px;
 	position: absolute;
-	margin-top: 70px;
+	margin-top: 73.5px;
 	right: 0px;
-	background-color: rgb(255, 255, 255, 0.4);
 	z-index: 3;
+	background-color: rgb(255, 255, 255, 0.4);
+}
+
+.catalog-list .action {
+	margin-top: 69.8px;
+	width: 293px;
 }
 
 .catalog-icecream:hover {
 	background-color: rgb(255, 255, 255, 0.4);
+	padding-bottom: -20px;
 }
 
 .shop {
@@ -867,11 +875,11 @@ a {
 
 .shop-title { 
 	font-size: 24px;
-    line-height: 30px;
-    font-weight: 500;
-    color: #323232;
-    padding: 25px 0 23px 19px;
-    margin: 36px 0 0 0;
+	line-height: 30px;
+	font-weight: 500;
+	color: #323232;
+	padding: 25px 0 23px 19px;
+	margin: 36px 0 0 0;
 }
 
 .shop-features {
@@ -892,7 +900,7 @@ a {
 	max-width: 470px;
 	position: relative;
 	padding-left: 25px;
-	margin: 0 35px 22px 10px;
+	margin: 0 35px 23px 10px;
 }
 
 .shop-feature svg {
@@ -915,7 +923,7 @@ a {
 }
 
 .news-blog {
-	margin: 22px 0 5px 20px;
+	margin: 22px 0 6px 20px;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: normal;
@@ -960,17 +968,17 @@ a {
 
 .dispatch button {
 	font-size: 19px;
-    line-height: 24px;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: 22px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    padding: 9px 15px;
+	line-height: 24px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: 22px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	padding: 9px 15px;
 }
 
 .contacts {
-	width: 1200px;
+	position: relative;
 	margin: 39px auto 0;
 	padding: 0;
 	font-size: 14px;
@@ -980,48 +988,57 @@ a {
 }	
 
 .contacts iframe {
+	width: 100%;
 	position: relative;
- 	z-index: 2;
+	z-index: 2;
 	border: none;
 }
 
 .contacts img {
 	position: absolute;
-    top: 1885px;
-    left: 0;
-    z-index: 1;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 .contacts svg {
 	transform: translate(266px, -295px);
-    position: absolute;
-    z-index: 3;
+	position: absolute;
+	z-index: 3;
 }
 
 .contacts-direction {
+	color: #323232;
 	background-color: #f8f7f4;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    position: absolute;
-    margin-top: -375px;
-    margin-left: 872px;
-    z-index: 3;
-    width: 300px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	position: absolute;
+	margin-top: -374px;
+	margin-left: 869px;
+	z-index: 3;
+	display: flex;
+	width: 304px;
 }
 
 .contacts-direction p {
-	margin: 27px 120px 4px 23px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	margin: 29px 125px 3px 25px;
 }
 
 .edd {
+	margin: 0 55px 0 25px;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
-	margin: 0 23px;
 }
 
 .contacts-direction .tl {
-	padding: 17px 23px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	padding: 16px 23px;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -1029,10 +1046,10 @@ a {
 
 .contacts-direction .button {
 	font-size: 18px;
-    line-height: 24px;
-    font-weight: bold;
-    margin: 10px 24px 30px;
-    padding: 9px 27px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 10px 25px 30px;
+	padding: 10px 28px;
 }
 
 .contacts-direction .link {
@@ -1049,9 +1066,11 @@ a {
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 	border: 1px solid #cccccc;
 	border-radius: 5px;
-	position: relative;
 	display: none;
-	left: -430px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .feedback p {
@@ -1073,11 +1092,12 @@ a {
 
 #comment-field {
 	width: 357px;
-	margin: 3px 0 0 22px;
+	margin: 3px 0 0 20px;
 	color: #999999;
 	box-sizing: border-box;
 	border: 1px solid #cccccc;
 	border-radius: 5px;
+	padding: 15px;
 }
 
 .modal-direction .button {
@@ -1093,7 +1113,7 @@ a {
 	border: 0;
 	cursor: pointer;
 	position: absolute;
-	top: 10px;
+	top: 0;
 	right: 10px;
 }
 
@@ -1196,7 +1216,7 @@ a {
 	width: 18px;
 	height: 15px;
 	top: 2px;
-    left: -24px;
+	left: -24px;
 }
 
 .footer-copyright {
@@ -1235,7 +1255,7 @@ a {
 .breadcrumbs-current {
 	position: relative;
 	padding-left: 22px;
-    padding-right: 18px;	
+	padding-right: 18px;	
 }
 
 .breadcrumbs-current-link::before {
@@ -1282,7 +1302,7 @@ input[type="email"].visually-hidden {
 	display: flex;
 	justify-content: flex-end;
 	padding: 0 25px;
-	margin-top: 65px;
+	margin-top: 67px;
 }
 
 .pagination-item a {
@@ -1328,7 +1348,7 @@ input[type="email"].visually-hidden {
 }
 
 .filters {
-	width: 865px;
+	width: 862px;
 	display: flex;
 	flex-wrap: wrap;
 	font-size: 14px;
@@ -1366,9 +1386,9 @@ input[type="email"].visually-hidden {
 	border-radius: 20px;
 	color: #ffffff;
 	font-size: 16px;
-    line-height: 18px;
-    font-weight: normal;
-    border: none;
+	line-height: 18px;
+	font-weight: normal;
+	border: none;
 }
 
 .sorting p {
@@ -1429,14 +1449,15 @@ input[type="email"].visually-hidden {
 	background-position: 0 0;
 }
 
-.filler-input-checkbox:disabled + label {
-	opacity: 0.1;
+.filler-input-checkbox:disabled + label,
+.fat-input-checkbox:disabled + label {
+	opacity: 0.4;
 }
 
 .filter-filler {
-	padding: 10px 39px 11px 19px;
-    background-color: #abbcb2;
-    border-radius: 20px;
+	padding: 12px 45px 12px 19px;
+	background-color: #abbcb2;
+	border-radius: 20px;
 }
 
 .filler p {
@@ -1478,17 +1499,17 @@ input[type="email"].visually-hidden {
 }
 
 .filter-button {
-	padding: 8px 33px;
-    color: #e5eae7;
-    background: #a6b7ae;
-    border: 2px solid #e5eae7;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: 37px;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: bold;
+	padding: 8px 28px;
+	color: #e5eae7;
+	background: #a6b7ae;
+	border: 1px solid #e5eae7;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: 0;
+	margin-top: 38px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
 }
 
 .filter-button:hover,
@@ -1509,8 +1530,8 @@ input[type="email"].visually-hidden {
 	background-color: #849d8f;
 	color: #ffffff;
 	width: 27px;
-    padding: 0 0 0 6px;
-    margin: 0;
+	padding: 0 0 0 6px;
+	margin: 0;
 }
 
 .price p {
@@ -1527,7 +1548,7 @@ input[type="email"].visually-hidden {
 .range-from svg {
 	position: absolute;
 	left: 38px;
-    top: 37px;
+	top: 37px;
 }
 
 .range-before svg {
@@ -1594,22 +1615,6 @@ input[type="email"].visually-hidden {
 	.modal-login {
 		width: 320px;
 	}
-	
-	/*.action {
-		margin-top: 0;
-		position: relative;
-	}
-
-	.catalog-icecream:befor:hover {
-		content: "";
-		position: absolute;
-		width: 267px;
-		height: 300px;
-		top: 0;
-		left: 0;
-		background-color: #ffffff;
-		opacity: 0.4;
-	}*/
 
 	.filter-sorting select {
 		border: none;
