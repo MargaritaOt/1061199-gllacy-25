@@ -54,7 +54,8 @@ a {
   font-weight: bold;
 }
 .site-navigation a:active {
-  background-color: #d07058;
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  background-color: #ededed;
   border-radius: 20px;
   color: #ffffff;
 }
@@ -145,6 +146,9 @@ a {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+}
+ul .catalog-menu {
+  margin-right: 0;
 }
 .site-navigation .catalog-menu {
   position: absolute;
@@ -300,7 +304,7 @@ a {
   display: block;
 }
 .search {
-  background-color: rgba(255, 255, 255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -325,14 +329,14 @@ a {
 .login-wrapper button {
   padding: 9px 26px;
   border-radius: 20px;
-  margin-top: 0;
+  margin-top: 10px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
 }
 .login-help {
   margin-left: 10px;
-  margin: 0 0 20px 16px;
+  margin: 0 0 10px 16px;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
@@ -345,7 +349,7 @@ a {
 }
 .login, .basket {
   position: relative;
-  background-color: rgba(255, 255, 255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
 .login-link svg, .basket-link svg {
@@ -441,7 +445,6 @@ a {
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
- 
 }
 .basket-wrapper {
   display: flex;
@@ -457,6 +460,7 @@ a {
   color: #6b6a69;
   font-weight: normal;
   display: none;
+  z-index: 10;
 }
 .user-navigation .modal-basket {
   position: absolute;
@@ -943,8 +947,8 @@ a {
   border-radius: 5px;
   display: none;
   position: fixed;
-  left: 56%;
-  top: 63%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 7;
 }
@@ -1282,12 +1286,13 @@ a {
   opacity: 0.4;
 }
 .filter-filler {
-  padding: 12px 45px 12px 19px;
+  padding: 12px 45px 10px 19px;
   background-color: #abbcb2;
   border-radius: 20px;
 }
 .filler p {
   margin: 7px 0 0 0;
+  padding: 7.5px 17px 6px 17px;
 }
 .filter-filler label {
   position: relative;
@@ -1320,7 +1325,7 @@ a {
   background-position: 0 0;
 }
 .filter-button {
-  padding: 8px 28px;
+  padding: 8px 27px 7px 27px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgb(255, 255, 255);
@@ -1331,16 +1336,19 @@ a {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  border: 0;
 }
 .filter-button:hover {
   color: #323232;
   background-color: #ffffff;
+  border: 0;
 }
 .filter-button:active {
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  background-color: #ededed;
   color: #323232;
-  background-color: #ffffff;
-  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
   text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  border: 0;
 }
 .price {
   position: relative;
@@ -1386,6 +1394,15 @@ a {
 }
 .modal-show {
   display: block;
+  animation: fadeIn .7s;
+}
+@keyfames fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @-moz-document url-prefix() {
   .catalog-icecream-price b::before {
