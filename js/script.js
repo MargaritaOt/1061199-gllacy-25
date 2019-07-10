@@ -14,11 +14,13 @@ evt.preventDefault();
 popup.classList.remove("modal-show");
 });
 
+
 var button = document.querySelector("#js-button");
 
-var modal = document.querySelector(".modal-direction");
+var modal = document.querySelector(".form-close");
 
-var close = popup.querySelector(".modal-close");
+var modalClose = popup.querySelector(".form-close");
+
 
 button.addEventListener("click", function (evt){
 evt.preventDefault();
@@ -27,5 +29,5 @@ modal.classList.add("modal-show");
 
 close.addEventListener("click", function (evt){
 evt.preventDefault();
-popup.classList.remove("modal-show");
+modal.classList.remove("modal-show");
 });
