@@ -10,6 +10,7 @@ body {
 	min-width: 1200px;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
 .container {
@@ -61,6 +62,12 @@ a {
 	border-radius: 20px;
 	color: #323232; 
 	font-weight: bold;
+}
+
+.site-navigation a:active {
+	background-color: #d07058;
+	border-radius: 20px;
+	color: #ffffff; 
 }
 
 .site-navigation-current {
@@ -152,6 +159,7 @@ a {
 }
 
 .site-navigation {
+	max-width: 700px;
 	list-style: none;
 	padding: 0 9px;
 	margin: 13px 0;
@@ -1465,6 +1473,15 @@ input[type="email"].visually-hidden {
 	background-position: 0 0;
 }
 
+.filler-input-checkbox:focus + label,
+.fat-input-checkbox:focus + label {
+	outline: 1px solid;
+}
+.filler-input-checkbox:hover + label,
+.fat-input-checkbox:hover + label {
+	color: #ffffff;
+}
+
 .filler-input-checkbox:disabled + label,
 .fat-input-checkbox:disabled + label {
 	opacity: 0.4;
@@ -1516,22 +1533,28 @@ input[type="email"].visually-hidden {
 
 .filter-button {
 	padding: 8px 28px;
-	color: #e5eae7;
-	background: #a6b7ae;
-	border: 1px solid #e5eae7;
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 2px solid rgb(255, 255, 255);
 	border-radius: 20px;
 	margin-left: auto;
 	margin-right: 0;
 	margin-top: 38px;
 	font-size: 16px;
 	line-height: 18px;
-	font-weight: bold;
+	font-weight: 500;
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter-button:hover {
 	color: #323232;
 	background-color: #ffffff;
+}
+
+.filter-button:active {
+	color: #323232;
+	background-color: #ffffff;
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35); 
+	text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35); 
 }
 
 .price {
